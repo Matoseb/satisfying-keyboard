@@ -12,7 +12,7 @@ let mouse = {
 
 let keyWidth = 50;
 let keyHeight = 50;
-let depth =30;
+let depth = 30;
 let textHeight = keyWidth / 3;
 
 function load() {
@@ -34,7 +34,6 @@ function load() {
   window.addEventListener("mousedown", mousedown);
   window.addEventListener("mouseup", mouseup);
 
-
   window.addEventListener("touchmove", touchHandle);
   window.addEventListener("touchend", touchHandle);
   window.addEventListener("touchstart", touchHandle);
@@ -43,15 +42,14 @@ function load() {
 }
 
 function touchHandle(e) {
-    let {pos} = mouse
-    pos.length = 0;
+  let { pos } = mouse;
+  pos.length = 0;
 
-    for(let {pageX, pageY} of e.touches) {
-        pos.push({x: pageX, y: pageY})
-    }
+  for (let { pageX, pageY } of e.touches) {
+    pos.push({ x: pageX, y: pageY });
+  }
 
-    e.preventDefault();
-   
+  e.preventDefault();
 }
 
 function generateKeys() {
