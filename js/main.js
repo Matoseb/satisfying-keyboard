@@ -12,6 +12,7 @@ let mouse = {
 
 let keyWidth = 50;
 let keyHeight = 50;
+let depth =30;
 let textHeight = keyWidth / 3;
 
 function load() {
@@ -56,7 +57,6 @@ function touchHandle(e) {
 function generateKeys() {
   let gap = 10;
   let round = 7;
-  let depth = 23;
 
   let offsetX = keyWidth + gap;
   let offsetY = keyHeight + gap;
