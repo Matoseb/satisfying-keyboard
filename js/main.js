@@ -48,6 +48,8 @@ function touchHandle(e) {
     for(let {pageX, pageY} of e.touches) {
         pos.push({x: pageX, y: pageY})
     }
+
+    e.preventDefault();
    
 }
 
